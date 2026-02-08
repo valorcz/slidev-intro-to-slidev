@@ -11,8 +11,6 @@ title: Introduction to Slidev
 info: |
   ## Slidev Introduction
   A brief introduction to Slidev framework
-
-  Learn more at [Sli.dev](https://sli.dev)
 author: Vašek Lorenc
 date: 2026
 transition: slide-left
@@ -128,33 +126,36 @@ level: 2
 
 # Markdown presentation frameworks
 
-Markdown is a popular format among developers and engineers.
+Markdown is a popular format among developers and engineers, but the ecosystem is fragmented.
 
 ::left::
 
+### Web/JS Based
+
 - [RevealJS](https://revealjs.com/)
-	- [webpro/reveal-md](https://github.com/webpro/reveal-md)
-	- [slid.es editor](https://slid.es)
-	- most adopted solution
-- Marimo Slides
-	- [Marimo](https://marimo.io/) for the win!
+  - [webpro/reveal-md](https://github.com/webpro/reveal-md)
+  - [slid.es editor](https://slid.es)
+  - most adopted solution
+- [Marp: Markdown Presentation Ecosystem](https://marp.app/)
 - [Slidev](https://sli.dev/)
+  - We'll be talking about this!
 
 ::right::
-- [Marp: Markdown Presentation Ecosystem](https://marp.app/)
-- [Obsidian Advanced Slides](https://github.com/MSzturc/obsidian-advanced-slides)
-- [pandoc](https://pandoc.org/demo/example33/10-slide-shows.html)
-- ...
-- [Presenterm](https://mfontanini.github.io/presenterm/)
-- ...
 
+### Others
+
+- Marimo Slides view
+	- [Marimo](https://marimo.io/) for the win!
+    - Great for data scientists
+- [Obsidian Advanced Slides](https://github.com/MSzturc/obsidian-advanced-slides)
+  - great if you love your notes
+- [pandoc](https://pandoc.org/demo/example33/10-slide-shows.html)
+- [presenterm](https://mfontanini.github.io/presenterm/)
 
 <!--
-
 And there are others I missed and didn't mention and they provide slideshow
 functionlity powered by Markdown. Some are not maintained already, some are
 included in other tools and frameworks, like [typst](https://typst.app/).
-
 -->
 
 ---
@@ -219,13 +220,13 @@ level: 2
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+- 📝 **Text-based**: focus on the content with Markdown, and then style them later
+- 🎨 **Themable**: themes can be shared and re-used as npm packages
+- 🧑‍💻 **Developer Friendly**: code highlighting, live coding with autocompletion
+- 🤹 **Interactive**: embed Vue components to enhance your expressions
+- 🎥 **Recording**: built-in recording and camera view
+- 📤 **Portable**: export to PDF, PPTX, PNGs, or even a hostable SPA
+- 🛠 **Hackable**: virtually anything that's possible on a webpage is possible in Slidev
 
 ---
 level: 2
@@ -271,9 +272,18 @@ transition: slide-up
 level: 2
 ---
 
+<script setup>
+import { ref } from 'vue'
+
+// This variable holds the counter value
+const myValue = ref(10)
+</script>
+
 # Slidev VueJS components
 
-<AutoFitText :max="200" :min="100" modelValue="Some text" class="text-red-400"/>
+<Counter v-model:count="myValue" />
+
+<AutoFitText :max="200" :min="100" :modelValue="`The value is: ${myValue}`" class="text-red-400"/>
 
 ---
 transition: slide-up
@@ -375,6 +385,8 @@ level: 2
 
 # Slidev Layouts
 
+Simplified building blocks for your presentations. With placeholders.
+
 ## Built-in layouts
 - `cover`
 - `default`
@@ -400,6 +412,29 @@ level: 2
 <template v-slot:author>
   Kung Fu Panda
 </template>
+
+---
+layout: image-right
+image: https://sli.dev/screenshots/presenter-mode.png
+backgroundSize: contain
+level: 2
+---
+
+# Presenter Mode
+
+Don't just look at code. Slidev generates a synchronized multi-window experience.
+
+- **Notes**: See your markdown comments.
+- **Next Slide**: Preview what's coming.
+- **Timer**: Keep track of your duration.
+- **Drawing**: Annotate directly on the slide.
+- **Export**: Export your slides.
+
+<v-click>
+<div class="bg-gray-100 dark:bg-gray-800 p-4 rounded text-sm">
+💡 <b>Pro Tip:</b> You can share the presentation URL with the audience so they can follow along on their own devices!
+</div>
+</v-click>
 
 ---
 layout: two-cols-header

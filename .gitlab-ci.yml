@@ -16,4 +16,6 @@ create-pages:
   script:
     - mkdir dist
     - pnpm build
+    - rm -rf public
+    - mv dist public
 

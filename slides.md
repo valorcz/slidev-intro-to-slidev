@@ -71,6 +71,7 @@ level: 2
 - sections, finally!
 
 ::right::
+
 ## weak points
 - accessibility challenges
 - information overload
@@ -87,12 +88,12 @@ level: 2
 
 Internet is full of articles arguing against (over)using PowerPoint.
 
-1. PowerPoint doing the thinking
-2. Focus on design
-3. Slides as a script
-4. Overusing presentations media
-5. Information overload
-6. Not suitable for graphs/charts
+1. powerPoint doing the thinking
+2. focus on design
+3. slides as a script
+4. overusing presentations media
+5. information overload
+6. not suitable for graphs/charts
 
 Source: [Matthew Caldwell: PowerPoint Considered Harmful](https://www.ucl.ac.uk/~ucbpmbc/old/ppoint.html)
 

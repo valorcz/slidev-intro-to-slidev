@@ -2,7 +2,7 @@
 # try also 'default' to start simple
 # theme: editorial
 # theme: apple-basic
-#theme: default
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
@@ -546,3 +546,22 @@ hideInToc: true
 # Thank you!
 
 ## Any questions? :)
+
+---
+layout: section
+---
+
+# Bonus section!
+
+To boldly go where just a few have gone before.
+
+---
+layout: iframe
+url: https://lucharo.github.io/slidev-marimo/
+---
+
+<!--
+This is a bonus slide to illustrate that people
+use slidev & marimo together, which makes it
+an extremely interesting combination for (not only) me :))
+-->

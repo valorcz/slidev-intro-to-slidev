@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import { onSlideEnter, onSlideLeave, useIsSlideActive } from '@slidev/client'
 
 const props = defineProps<{ text: string }>()
 const display = ref('')
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#&'
 
-onMounted(() => {
+onSlideEnter(() => {
   let iteration = 0
   const interval = setInterval(() => {
     display.value = props.text

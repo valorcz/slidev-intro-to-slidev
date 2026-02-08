@@ -291,20 +291,22 @@ Any Vue component can be embedded directly into your slides.
 
 <Counter v-model:count="myValue" />
 
-<AutoFitText :max="200" :min="100" :modelValue="`The value is: ${myValue}`" />
+<AutoFitText :max="200" :min="80" :modelValue="`The value is: ${myValue}`" />
 
 Not the most useful example, I know.
 
 ---
 transition: slide-up
 level: 2
+layout: image-right
+image: https://i.pinimg.com/736x/c7/54/7f/c7547fff170fcd339afc34adba860462.jpg
 ---
 
 # Slidev Vue.js components
 
 Neither is this one :)
 
-<GlitchHeader text="LONG SECURITY HEADER"/>
+<GlitchHeader text="Cyberpunk 2077: Hackerman"/>
 
 ---
 transition: slide-up
@@ -391,8 +393,6 @@ level: 2
 # Slidev Add-ons
 
 Add-ons let you extend Slidev with additional functionality; e.g. plotting.
-
-## STEM (Charts)
 
 <PlotlyFigure
   src="figure.json"

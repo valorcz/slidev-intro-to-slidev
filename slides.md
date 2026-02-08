@@ -265,7 +265,13 @@ timeline
     2006 : Twitter
 ```
 
-See [mermaid docs](https://mermaid.js.org/) for more details.
+See [mermaid docs](https://mermaid.js.org/) for more details. 
+Or [beautiful mermaid](https://agents.craft.do/mermaid) for stylish rendering.
+
+<!--
+Another related project worth mentioning is https://agents.craft.do/mermaid
+which allows rendering to beautifully styled components, or to ASCII art!
+-->
 
 ---
 transition: slide-up

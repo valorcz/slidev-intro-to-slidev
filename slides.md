@@ -32,8 +32,8 @@ layout: image-right
 # Outline
 
 - PowerPoint
-    - Presentations made easy
-	- PowerPoint weak points
+    - Why it works
+	- Where it fails
 - Markdown presentation frameworks
 - Slidev
     - Basics
@@ -58,11 +58,11 @@ level: 2
 
 # Presentations made easy
 
-**PowerPoint** made presentations easy and available for masses.
+**PowerPoint** made presentations easy and available to masses.
 
 ::left::
 
-## advantages
+## Advantages
 - easy to use
 - export options
 - prevalence
@@ -72,13 +72,13 @@ level: 2
 
 ::right::
 
-## weak points
+## Weak points
 - accessibility challenges
 - information overload
 - limited interactivity
 - limited integration/generation
 - linear structure
-- available designs quality
+- inconsistent design quality
 
 ---
 level: 2
@@ -88,12 +88,12 @@ level: 2
 
 Internet is full of articles arguing against (over)using PowerPoint.
 
-1. powerPoint doing the thinking
+1. PowerPoint doing the thinking
 2. focus on design
 3. slides as a script
-4. overusing presentations media
+4. overusing the medium of slides
 5. information overload
-6. not suitable for graphs/charts
+6. not ideal for complex graphs/charts
 
 Source: [Matthew Caldwell: PowerPoint Considered Harmful](https://www.ucl.ac.uk/~ucbpmbc/old/ppoint.html)
 
@@ -146,8 +146,8 @@ Markdown is a popular format among developers and engineers, but the ecosystem i
 ### Others
 
 - Marimo Slides view
-	- [Marimo](https://marimo.io/) for the win!
-    - Great for data scientists
+  - [Marimo](https://marimo.io/) for the win!
+  - Great for data scientists
 - [Obsidian Advanced Slides](https://github.com/MSzturc/obsidian-advanced-slides)
   - great if you love your notes
 - [pandoc](https://pandoc.org/demo/example33/10-slide-shows.html)
@@ -155,7 +155,7 @@ Markdown is a popular format among developers and engineers, but the ecosystem i
 
 <!--
 And there are others I missed and didn't mention and they provide slideshow
-functionlity powered by Markdown. Some are not maintained already, some are
+functionality powered by Markdown. Some are not maintained already, some are
 included in other tools and frameworks, like [typst](https://typst.app/).
 -->
 
@@ -165,7 +165,7 @@ level: 2
 
 # Markdown frameworks problem
 
-I usually ended up with a plenty of HTML mixed into the markdown notes.
+I often ended up mixing in a lots of HTML mixed into the markdown notes.
 
 ```markdown
 # Presentation title
@@ -179,7 +179,7 @@ Presentation subtitle
 </div>
 ```
 
-Which makes the copy-paste and redesigns painful again.
+Which makes the copy-pasting and redesigns painful again.
 
 ---
 layout: two-cols-header
@@ -197,16 +197,14 @@ Markdown based presentation framework with plenty of customization options
 	- syntax highlighters
 	- mermaid
 	- flexible animations
-	- VueJS components
-	- layouts!
 - **layouts**
 	- design customization options
     - extensibility
 
 ::right::
 
-- **VueJS components**
-	- sli.dev add-ons
+- **Vue.js components**
+	- Slidev add-ons
 - **interactive code editor**
     - Monaco editor
     - by default for TypeScript
@@ -219,7 +217,7 @@ level: 2
 
 # What is Slidev?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Slidev is a slide-making and presentation tool designed for developers with the following features
 
 - 📝 **Text-based**: focus on the content with Markdown, and then style them later
 - 🎨 **Themable**: themes can be shared and re-used as npm packages
@@ -259,11 +257,12 @@ Mermaid lets you create diagrams and visualizations using text and code.
 
 ```mermaid
 timeline
-    2002 : LinkedIn
-    2004 : Facebook
-         : Google
-    2005 : YouTube
-    2006 : Twitter
+    Pre-1950s : Chalkboards : Flip Charts : Physical Dioramas
+    1950s - 1970s : Overhead Projectors : 35mm Slide Projectors : Filmstrips
+    1980s : Digital Beginnings : Forethought "Presenter" (1984) : PowerPoint 1.0 (Black & White)
+    1990s : The Office Era : Microsoft PowerPoint (Windows) : Apple Keynote (Internal) : Clunky LCD Panels
+    2000s : Modern Maturity : Keynote (Public Release) : Prezi (Non-linear Zooming) : Google Slides (Cloud Collab)
+    2010s - 2020s : AI & Design Automation : Canva (Design-first) : Beautiful.ai (Smart Layouts) : Gamma (AI-generated)
 ```
 
 See [mermaid docs](https://mermaid.js.org/) for more details. 
@@ -286,11 +285,26 @@ import { ref } from 'vue'
 const myValue = ref(10)
 </script>
 
-# Slidev VueJS components
+# Slidev Vue.js components
+
+Any Vue component can be embedded directly into your slides.
 
 <Counter v-model:count="myValue" />
 
-<AutoFitText :max="200" :min="100" :modelValue="`The value is: ${myValue}`" class="text-red-400"/>
+<AutoFitText :max="200" :min="100" :modelValue="`The value is: ${myValue}`" />
+
+Not the most useful example, I know.
+
+---
+transition: slide-up
+level: 2
+---
+
+# Slidev Vue.js components
+
+Neither is this one :)
+
+<GlitchHeader text="LONG SECURITY HEADER"/>
 
 ---
 transition: slide-up
@@ -302,7 +316,7 @@ class: dense
 
 Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations in code snippets.
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move.
+Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to use it.
 
 ````md magic-move {lines: true}
 ```ts {*|2|*}
@@ -376,6 +390,8 @@ level: 2
 
 # Slidev Add-ons
 
+Add-ons let you extend Slidev with additional functionality; e.g. plotting.
+
 ## STEM (Charts)
 
 <PlotlyFigure
@@ -393,7 +409,7 @@ level: 2
 
 # Slidev Layouts
 
-Simplified building blocks for your presentations. With placeholders.
+Simplified building blocks for your presentations. With built-in placeholders.
 
 ## Built-in layouts
 - `cover`
@@ -418,7 +434,7 @@ level: 2
 “There is no charge for awesomeness... or attractiveness.”
 
 <template v-slot:author>
-  Kung Fu Panda
+  Po (Kung Fu Panda)
 </template>
 
 ---
@@ -451,7 +467,7 @@ level: 2
 
 # Slidev Custom Themes
 
-Put your preferred design options, layouts and automations in to a single package.
+Package your layouts, styling, and automation into a reusable theme.
 
 ### Custom layouts
 - simplified design choices
@@ -469,7 +485,7 @@ level: 2
 
 # Slidev AI features
 
-All this makes vibe-coding possible!
+All this makes rapid prototyping with AI possible!
 See [work with AI](https://sli.dev/guide/work-with-ai) for more details.
 
 ## Skills
@@ -486,7 +502,7 @@ npx skills add slidevjs/slidev
 
 
 <!--
-We live in 21st century, so we need to include AI in the presentation!
+We live in the 21st century, so we need to include AI in the presentation!
 -->
 
 ---
@@ -497,7 +513,7 @@ background: https://pbs.twimg.com/profile_images/1973441092575170560/WukzXtm_.jp
 
 # Custom theme
 
-Mostly vibe-coded with Gemini.
+Prototyped rapidly with Gemini.
 
 ---
 layout: iframe

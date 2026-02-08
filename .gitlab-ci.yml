@@ -14,5 +14,6 @@ create-pages:
     - corepack enable pnpm
     - pnpm install
   script:
+    - mkdir dist
     - pnpm build
 

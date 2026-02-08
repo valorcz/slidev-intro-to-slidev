@@ -1,8 +1,8 @@
 ---
 # try also 'default' to start simple
 # theme: editorial
-theme: apple-basic
-# theme: default
+# theme: apple-basic
+#theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
@@ -288,13 +288,14 @@ const myValue = ref(10)
 ---
 transition: slide-up
 level: 2
+class: dense
 ---
 
 # Shiki Magic Move
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations in code snippets.
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move.
 
 ````md magic-move {lines: true}
 ```ts {*|2|*}
@@ -487,7 +488,7 @@ layout: section
 background: https://pbs.twimg.com/profile_images/1973441092575170560/WukzXtm_.jpg
 ---
 
-# Custom theme example
+# Custom theme
 
 Mostly vibe-coded with Gemini.
 
